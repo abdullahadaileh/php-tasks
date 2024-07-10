@@ -117,13 +117,14 @@ foreach ($books as $book) {
     $array = ["apple", "banana", "cherry"];
     $uppercaseArray = array_map('strtoupper', $array);
     print_r($uppercaseArray);
-
+// بنستخدمها لتنفيذ funk  معين على كل عناصر ال array
     echo "<br><br><br>";
 
 // 2
 $numbers = [1, 2, 3, 4, 5];
 $filteredNumbers = array_filter($numbers, function($num) {
     return $num % 2 == 0; 
+    // بتفلتر الا array بناءا على الشرط الي احنا حاطينو مثلا احنا حاطين انو تطبعلنا الارقام الي لما نقسمها على ثنين بكون باقي القسمه عنا 0 يعني الاعداد الزوجية باختصار
 });
 print_r($filteredNumbers);
 
