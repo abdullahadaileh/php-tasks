@@ -131,7 +131,12 @@ print_r($filteredNumbers);
 echo "<br><br><br>";
 
 // 3
-
+$array1 = [1, 2, 3, 4, 5];
+$array2 = [3, 4, 5, 6, 7];
+$commonElements = array_intersect($array1, $array2);
+foreach ($commonElements as $value) {
+    echo $value . "/";
+}
 echo "<br><br><br>";
 
 // 4
