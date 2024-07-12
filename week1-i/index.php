@@ -2,11 +2,11 @@
 // task1
 
 echo "<h3>-------------------------------------------------------------Task 1----------------------------------------------------------------</h3>";
-$cities = [ "AL-KARAK","Amman", "Zarqa", "Irbid", "Russeifa", "Aqaba", "Mafraq", "Madaba", "Salt", "Tafila"];
+$cities = [ "AL-KARAK","Amman", "Zarqa", "Irbid", "Russeifa", "Aqaba", "Mafraq", "Madaba", "Salt", "Tafila"]; //creat
 
-$removedCity = "Amman";
+$removedCity = "Amman";  //remove
 
-$searche = array_search($removedCity,$cities); 
+$searche = array_search($removedCity,$cities); // search
 if ($searche !== false ) {
     unset($cities[$searche]);
 };
@@ -21,22 +21,22 @@ if (in_array("Amman",$cities)) {
    echo "<h3>We found it</h3>";
 }
 
-print_r(array_slice($cities,2));
+print_r(array_slice($cities,2));  // slice
 
 // task2
 echo "<h3>-------------------------------------------------------------Task 2----------------------------------------------------------------</h3>";
 
-$store = [
+$store = [  // creat
     "phone"=>10,
     "tablet"=>23,
     "iBad"=>42,
     "tv"=>21
 ];
 
-foreach ($store as $products => $prices) {
+foreach ($store as $products => $prices) {  // print products
     echo "<h3>$products</h3>";
 }
-foreach ($store as $products => $prices) {
+foreach ($store as $products => $prices) { // print prices
     echo "<h3>$prices</h3>";
 }
 
@@ -46,25 +46,29 @@ foreach ($store as $products => $prices) {
 //     $result += $prices;
 // }
 
-// $countTotal = count($store); 
-// echo "<h3>Total :{$result}</h3>";
 
 
-// $average = $result / $countTotal;
-// echo "<h3>Average : {$average}</h3>";
 
 
 $result = 0;
-foreach ($store as $products => $prices) {
+foreach ($store as $products => $prices) {  //calculate 
     $result += $prices;
 }
 
-$theTotal = count($store);
 echo "<h3>TOTAL: {$result}</h3>";
+
+$countTotal = count($store); //avarage
+$average = $result / $countTotal;
+echo "<h3>Average : {$average}</h3>";
+
+$maxPrice = max($store);  //find the most expensive products
+$mostExpensiveProduct = array_search($maxPrice, $store);
+echo "$mostExpensiveProduct --- $maxPrice.";
+
 
 echo "<h3>-------------------------------------------------------------Task 3----------------------------------------------------------------</h3>";
 
-$books = [
+$books = [          //creat
     [
         "title" => "The Night Circus",
         "author" => "Erin Morgenstern",
@@ -83,29 +87,23 @@ $books = [
 ];
 
 $books[] = [
-    "title" => "The Goldfinch",
+    "title" => "The Goldfinch",    // add
     "author" => "Donna Tartt",
     "year" => 2013
 ];
 
-$books[0]["author"] = "Eren Yeager";
+$books[0]["author"] = "Eren Yeager";   //update
 
-// usort($books, function($a, $b) {
-//     return strcmp($a['title'], $b['title']);
-// });
+usort($books, function($a, $b) {
+    return strcmp($a['title'], $b['title']);
+});
 
 foreach ($books as $book) {
     if ($book["year"] >= 2010) { 
         echo "Title: " . $book['title'] . "<br>";
         echo "Author: " . $book['author'] . "<br>";
         echo "Year: " . $book['year'] . "<br><br>";
-    }else {
-        echo "<br><br><br>";
-        echo "this the deleted book";
-        echo "Title: " . $book['title'] . "<br>";
-        echo "Author:" . $book['author'] . "<br>";
-        echo "Year: " . $book['year'] . "<br><br><br>";
-        }
+    }
     }
 
 
@@ -114,58 +112,124 @@ foreach ($books as $book) {
 
 
 // 1
+echo "task1<br><br>";
+
     $array = ["apple", "banana", "cherry"];
-    $uppercaseArray = array_map('strtoupper', $array);
+    $uppercaseArray = array_map('strtoupper', $array); 
     print_r($uppercaseArray);
-// بنستخدمها لتنفيذ funk  معين على كل عناصر ال array
+
     echo "<br><br><br>";
 
 // 2
+echo "task2<br><br>";
+// فلتر للاعداد الزوجية
 $numbers = [1, 2, 3, 4, 5];
 $filteredNumbers = array_filter($numbers, function($num) {
     return $num % 2 == 0; 
-    // بتفلتر الا array بناءا على الشرط الي احنا حاطينو مثلا احنا حاطين انو تطبعلنا الارقام الي لما نقسمها على ثنين بكون باقي القسمه عنا 0 يعني الاعداد الزوجية باختصار
 });
 print_r($filteredNumbers);
 
 echo "<br><br><br>";
-
 // 3
-$array1 = [1, 2, 3, 4, 5];
-$array2 = [3, 4, 5, 6, 7];
-$commonElements = array_intersect($array1, $array2);
-foreach ($commonElements as $value) {
-    echo $value . "/";
-}
+echo "task3<br><br>";
+
+
+
 echo "<br><br><br>";
 
 // 4
+echo "task4<br><br>";
+// بضيف الfunk الي بدي ياه على كل عناصر ال array
+$fruits = ['apple', 'banana', 'cherry'];
+array_walk($fruits, function(&$item, $key) {
+    $item = strtoupper($item);
+});
+
+print_r($fruits);
+
 
 echo "<br><br><br>";
 
 // 5
+echo "task5<br><br>";
+// الاختلافات
+$array5a = ['abdullah', 'ahmad', 'mohammad', 'rashed'];
+$array5b = ['ala', 'abdullah', 'abood', 'ahmad'];
+
+$diff = array_diff($array5a, $array5b);
+$diff = array_diff($array5b, $array5a);
+
+print_r($diff);
 
 echo "<br><br><br>";
 
+
 // 6
+// المتشابهات
+echo "task6<br><br>";
+$array6a = ['abdullah', 'ahmad', 'mohammad', 'rashed'];
+$array6b = ['ala', 'abdullah', 'abood', 'ahmad'];
+$intere = array_intersect($array5a, $array5b);
+print_r($intere);
+
+
 
 echo "<br><br><br>";
 
 // 7
+echo "task7<br><br>";
+// بعمل النا من ال index array => associative array
+$key = ["book1","booke2","booke3"];
+$value = ["The Night Circus","Moby-Dick","Where the Crawdads Sing"];
+$comp = array_combine($key,$value);
+echo "<pre>";
+    print_r($comp);
+echo "</pre>";
+
 
 echo "<br><br><br>";
 
 // 8
+echo "task8<br><br>";
+
+$students =
+[
+    ["Name" => "Abdullah", "Age" => 19, "grade" => 99],  // بطبعلك العنصر الي بدك ياه بال بال array  لكن اذا كان في اشي متشابه ما بطبعه
+    ["Name" => "Ahmad", "Age" => 18, "grade" => 98],
+    ["Name" => "Ala", "Age" => 20, "grade" => 97],
+
+];
+
+$coloms = array_column($students, 'Name','Age',);
+
+// Print the result
+print_r($coloms);
+
 
 echo "<br><br><br>";
 
 // 9
+echo "task9<br><br>";
+
+$array = array('a', 'b', 'c', 'd', 'e');
+
+// Extract elements starting from index 1, up to 3 (exclusive)
+$portion = array_slice($array, 1, 3);
+
+print_r($portion);
 
 echo "<br><br><br>";
 
 // 10
+echo "task10<br><br>";
+
+$cities = [ "AL-KARAK","Amman", "Zarqa", "Irbid", "Russeifa", "Aqaba", "Mafraq", "Madaba", "Salt", "Tafila"]; //creat
 
 
+if (in_array("Amman",$cities)) {
+    echo "<h3>We found it</h3>";
+ }
+ 
 
 
 
