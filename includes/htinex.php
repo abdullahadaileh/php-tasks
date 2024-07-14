@@ -44,7 +44,7 @@
     </style>
     </head>
 <body>
-<div class="form-container">
+<!-- <div class="form-container">
         <h2>form</h2>
         <form action="formhandler.php" method="post">
             <div class="form-group">
@@ -59,6 +59,14 @@
                 <input type="submit" value="login ">
             </div>
         </form>
-    </div>
+    </div> -->
+
+    <h2>Enter</h2>
+    <form action="formhandler.php" method="POST">
+        <input type="text" name="url" placeholder="Enter URL">
+        <button type="submit" name="submitt">GO</button>
+    </form>
+
+    
 </body>
 </html>
