@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+:root {
+    --scrollbar-track-color: linear-gradient(to right, #ffcc00, #ff6666, #6699ff);
+    --scrollbar-thumb-color: #000000;
+    --scrollbar-thumb-hover-color: #000000;
+    --scrollbar-width: 12px;
+    --scrollbar-radius: 10px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background-color: black; 
+    border-radius: var(--scrollbar-radius);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+  }
         body{
             background-color: black;
         }
