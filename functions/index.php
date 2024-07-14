@@ -4,7 +4,20 @@ echo "--------------------------------------------------------------Function tas
 echo "<br><br><br><br>";
 
 
+function isPrimee($number) {
+    if ($number < 2) {
+        return false; // لانو الاعداد الاوليه بتكون اكبر من 1
+    }
 
+
+    for ($i = 2; $i <= sqrt($number); $i++) { // اذا باقي القسمة مش 0 معناتو العدد اولي
+        if ($number % $i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
 
 
 echo "<br><br><br><br>";
@@ -104,19 +117,6 @@ $array1 = array_unique($array1);
 echo "<pre>";
 print_r($array1);
 echo "</pre>";
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
