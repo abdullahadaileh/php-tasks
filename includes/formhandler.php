@@ -17,5 +17,19 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
         
 }
 
+echo "<br><br><br><br>";
+echo "--------------------------------------------------------------task2-----------------------------------------------------------";
+echo "<br><br><br><br>";
+
+if (isset($_POST['submitt'])) {  // 
+
+    $url = $_POST['url'];
+
+    if (filter_var($url, FILTER_VALIDATE_URL)) { // بتاكد اذنو الرابط شغال 
+
+        header("Location: $url");
+        exit;
+    }
+}
 
 
