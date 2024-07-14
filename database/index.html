@@ -1,68 +1,174 @@
-<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+          text-align: center;
+        }
+        pre{
+            text-align: start;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Database</h2>
+    <pre>
+        
+ 1-A database is an organized collection of data, including words, numbers, images, and more.
+ It is used for storing and managing information in a structured way that facilitates easy access and retrieval.
+ Data within databases are organized using specific methods to efficiently manage and quickly search for information.
+ They are utilized across a wide range of applications such as content management systems, electronic applications, business
+ applications, and various other fields.
  
-
-
-10-CREATE DATABASE StudentDB;
-
-11-USE StudentDB;
-
-12-CREATE TABLE Students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100),
-    enrollment_date DATE
-);
-
-12-INSERT INTO students (name, email, enrollment_date)
-VALUES ('ala','s@s','11-11-2011');
-
-
-12-UPDATE students
-SET name = 'ahmad'
-WHERE id = 1;
-
-12-DELETE FROM students 
-WHERE id = 1;
-
-
-************************************************************************************
-
-
-13-CREATE TABLE Employees (
-	emp_id INT PRIMARY KEY AUTO_INCREMENT,
-    emp_name varchar(100) NOT null,
-    emp_position varchar(100),
-    hire_date DATE 
-)
-
-
- **********************************************************************************
-
-14-
- CREATE TABLE Employees (
-    emp_id INT PRIMARY KEY AUTO_INCREMENT,
-    emp_name VARCHAR(100) NOT NULL,
-    emp_position VARCHAR(50),
-    hire_date DATE,
-);
-
-15-
-INSERT INTO employees (emp_name, emp_position, hire_date) 
-VALUES ('John Smith', 'Manager', '2023-01-15'),
- ('Jane Doe', 'Developer', '2022-08-20'),
-  ('Michael Johnson', 'Sales Associate', '2023-03-10'),
-   ('Emily Brown', 'HR Specialist', '2022-12-05'),
- ('David Wilson', 'Accountant', '2023-02-28');
-
-
-
- UPDATE employees
-SET emp_position = 'good developer'
-WHERE emp_id = 2;
-
-
-DELETE FROM employees
-WHERE emp_id = 3;
-
-
--->
+ ******************************************************************************************************************
+ 
+ 2-SQL (Structured Query Language) is a programming language used to manage and interact with databases.
+ It is used to create and manage tables and data within databases, as well as to search, update, delete,
+ and insert data. SQL is a globally recognized standard language supported by most database management 
+ systems such as MySQL, Oracle, SQL Server, and others. SQL commands include instructions for creating 
+ databases and tables, modifying them, and handling various data operations efficiently.
+ 
+ ******************************************************************************************************************
+ 
+ 3-comparison chart between Relational and Non-relational databases.
+ 
+ A. Data Structure:
+    - Relational Databases: Data is structured and organized in tables with predefined schemas.
+ 
+    - Non-relational Databases: Data can be structured (semi-structured or hierarchical) or unstructured.
+ 
+ B. Flexibility:
+    - Relational Databases: Less flexible in handling unstructured data.
+    - Non-relational Databases: More flexible in handling varying types and structures of data.
+ 
+ C. Scalability:
+    - Relational Databases: Vertical scaling (increasing hardware resources) is common.
+    - Non-relational Databases: Horizontal scaling (adding more servers) is easier and common.
+ 
+ ******************************************************************************************************************
+ 
+ 4-Data Typs
+ 
+ A. Numeric Types
+    - a- Integer: Used for storing whole numbers.
+    - b- Decimal/Numeric: Used for storing decimal numbers.
+    - c- Floating Point: Used for storing large decimal numbers specified with floating point precision (E6).
+    - d- Boolean: Used for storing true/false values.
+ 
+ B. String Types
+    - A- Character Strings:
+      - a- CHAR: Used for storing a fixed-length string of characters.
+      - b- VARCHAR: Used for storing a variable-length string of characters, with a maximum size specified.
+ 
+    - B- Binary Large Objects (BLOB, TEXT):
+      - a- BLOB: Used for storing large binary data such as images and videos.
+      - b- TEXT: Used for storing long textual data.
+ 
+ ******************************************************************************************************************
+ 
+ 5- Date and Time Types
+    - a- DATE: Used for storing dates in the format 'YYYY-MM-DD'.
+    - b- TIME: Used for storing times in the format 'HH:MM'.
+    - c- DATETIME: Used for storing both date and time in the format 'YYYY-MM-DD HH:MM'.
+    - d- TIMESTAMP: Used for storing timestamps based on system local time or Coordinated Universal Time (UTC).
+    - e- YEAR: Used for storing a year in the format 'YYYY'.
+ 
+ ******************************************************************************************************************
+ 
+ 6- primary key
+ A primary key in a database is a unique identifier for each record in a table. It ensures that every row is distinct
+ and facilitates efficient data retrieval and maintenance. Additionally, primary keys establish relationships between
+ tables, ensuring data integrity and supporting effective database management practices.
+ 
+ ******************************************************************************************************************
+ 
+ 7-Null vs. Not Null Constraints:
+ 
+ - NULL: Allows missing or unknown values in a column.
+ - NOT NULL: Requires a column to always have a value, no nulls allowed.
+ 
+ ******************************************************************************************************************
+ 
+ 8-Auto-Increment:
+ 
+ Auto-increment automatically generates unique numeric values for each new row added to a table, typically used for primary keys.
+ 
+ Example:
+ 
+ CREATE TABLE Users (
+     UserID INT AUTO_INCREMENT PRIMARY KEY,
+     Username VARCHAR(50) NOT NULL
+ 
+ 
+ 9-CREATE DATABASE StudentDB;
+ 
+ 10-USE StudentDB;
+ 
+ 11-CREATE TABLE Students (
+     id INT PRIMARY KEY AUTO_INCREMENT,
+     name VARCHAR(100) NOT NULL,
+     email VARCHAR(100),
+     enrollment_date DATE
+ );
+ 
+ 12-INSERT INTO students (name, email, enrollment_date)
+ VALUES ('ala','s@s','11-11-2011');
+ 
+ 
+ 12-UPDATE students
+ SET name = 'ahmad'
+ WHERE id = 1;
+ 
+ 12-DELETE FROM students 
+ WHERE id = 1;
+ 
+ 
+ ************************************************************************************
+ 
+ 
+ 13-CREATE TABLE Employees (
+     emp_id INT PRIMARY KEY AUTO_INCREMENT,
+     emp_name varchar(100) NOT null,
+     emp_position varchar(100),
+     hire_date DATE 
+ )
+ 
+ 
+  **********************************************************************************
+ 
+ 14-
+  CREATE TABLE Employees (
+     emp_id INT PRIMARY KEY AUTO_INCREMENT,
+     emp_name VARCHAR(100) NOT NULL,
+     emp_position VARCHAR(50),
+     hire_date DATE,
+ );
+ 
+ 15-
+ INSERT INTO employees (emp_name, emp_position, hire_date) 
+ VALUES ('John Smith', 'Manager', '2023-01-15'),
+  ('Jane Doe', 'Developer', '2022-08-20'),
+   ('Michael Johnson', 'Sales Associate', '2023-03-10'),
+    ('Emily Brown', 'HR Specialist', '2022-12-05'),
+  ('David Wilson', 'Accountant', '2023-02-28');
+ 
+ 
+ 
+  UPDATE employees
+ SET emp_position = 'good developer'
+ WHERE emp_id = 2;
+ 
+ 
+ DELETE FROM employees
+ WHERE emp_id = 3;
+ 
+ 
+ 
+    </pre>
+</body>
+</html>
