@@ -1,0 +1,68 @@
+<!-- 
+ 
+
+
+10-CREATE DATABASE StudentDB;
+
+11-USE StudentDB;
+
+12-CREATE TABLE Students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    enrollment_date DATE
+);
+
+12-INSERT INTO students (name, email, enrollment_date)
+VALUES ('ala','s@s','11-11-2011');
+
+
+12-UPDATE students
+SET name = 'ahmad'
+WHERE id = 1;
+
+12-DELETE FROM students 
+WHERE id = 1;
+
+
+************************************************************************************
+
+
+13-CREATE TABLE Employees (
+	emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    emp_name varchar(100) NOT null,
+    emp_position varchar(100),
+    hire_date DATE 
+)
+
+
+ **********************************************************************************
+
+14-
+ CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    emp_name VARCHAR(100) NOT NULL,
+    emp_position VARCHAR(50),
+    hire_date DATE,
+);
+
+15-
+INSERT INTO employees (emp_name, emp_position, hire_date) 
+VALUES ('John Smith', 'Manager', '2023-01-15'),
+ ('Jane Doe', 'Developer', '2022-08-20'),
+  ('Michael Johnson', 'Sales Associate', '2023-03-10'),
+   ('Emily Brown', 'HR Specialist', '2022-12-05'),
+ ('David Wilson', 'Accountant', '2023-02-28');
+
+
+
+ UPDATE employees
+SET emp_position = 'good developer'
+WHERE emp_id = 2;
+
+
+DELETE FROM employees
+WHERE emp_id = 3;
+
+
+-->
