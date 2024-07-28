@@ -59,8 +59,8 @@ class Inventory {
 
 }
 
-$car1 = new Car("Toyota", "Corolla", "1HGBH41JXMN109186");
-$car2 = new Car("Honda", "Civic", "2HGES267X5H516178");
+$car1 = new Car("Mercedes", "S Class", "1HGBH41JXMN109186");
+$car2 = new Car("BMW", "M4 compation", "2HGES267X5H516178");
 
 $theInventory = new Inventory();
 $theInventory->addCar($car1);
